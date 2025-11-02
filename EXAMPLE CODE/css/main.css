@@ -1,0 +1,372 @@
+/*
+	Welcome to CSS styling! This is how we style our HTML pages. It is important to note how we select and change the styling for an element:
+
+	selector {
+		property: value;
+		property2: value2;
+	}
+
+	selector - The item we are selecting to be restyled. This can be an element name such as h1 or img, or the name of an id or class (#robots, .item-class)
+	property - A CSS property that we want to restyle the element with, such as font-size or color.
+	value - The value we want to set the property to, such as 16px or blue.
+
+	Make sure to separate different property/value statements with a colon between property: value, and a semicolon at the end of the property: value; statement. 
+*/
+
+
+
+/*
+	Below we have selected the body element - aka <body> - and are setting some styling for it. Generally it is a good idea to only select entire sets of elements to set default stylings. Aim to use classes when styling elements more specifically.
+*/
+body {
+	/*
+		Font family works by stating a series of fonts in order from most to least specific. The reason is to ensure that if the first font is not available, that we have fall-backs that the browser can load up if needed.
+	*/
+	font-family: Helvetica, Verdana, sans-serif;
+
+	/*
+		Margin sets the spacing outside of the borders of an element's box. Because we are only setting one value below, it makes it the margin value for all sides of our box, which in this case is all sides of our body element.
+	*/
+	margin: 0;
+
+	/*
+		Setting a default font size for all elements who are children of the body tag. How 'rems' work are explained in the next comment.
+	*/
+	font-size: 1.25rem;
+}
+
+/*
+	Setting a calm background colour so we see the white content area better.
+*/
+body {
+	background-color: rgb(245,247,255);
+	color: rgb(20,20,20);
+}
+
+/*
+	By limiting how wide the page can grow we keep the layout looking neat on big screens.
+*/
+main,
+nav[aria-label="Breadcrumb"],
+header,
+footer {
+	max-width: 70rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	background-color: rgb(78,78,255);
+	padding: 1.5rem 2rem;
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	color: white;
+}
+
+/*
+header > div {
+	display: inline-block;
+}
+*/
+
+header h1 {
+	font-size: 2.5rem;
+	margin: 0;
+	letter-spacing: 0.1rem;
+}
+
+header h1 strong {
+	color: white;
+}
+
+header h1 strong:nth-of-type(2) {
+	color: black;
+}
+
+header p {
+	margin: 0;
+	font-size: 0.9rem;
+}
+
+header nav {
+	display: inline-block;
+}
+
+header nav a {
+	background-color: transparent;
+	color: white;
+	font-size: 1.1rem;
+	padding: 0.25rem 0.5rem;
+	margin-right: 0.5rem;
+}
+
+header nav a[aria-current="page"] {
+	font-weight: bold;
+}
+
+header nav a:hover,
+header nav a:focus {
+	background-color: rgba(255,255,255,0.2);
+}
+
+header form {
+	margin-left: auto;
+	display: inline-block;
+}
+
+header form label {
+	display: none;
+}
+
+header form input {
+	padding: 0.4rem 0.6rem;
+	border: none;
+	border-radius: 0.2rem;
+	min-width: 12rem;
+}
+
+nav[aria-label="Breadcrumb"] {
+	font-size: 0.9rem;
+	margin-bottom: 2rem;
+	color: rgb(110,110,150);
+}
+
+nav[aria-label="Breadcrumb"] ol {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+	padding: 0;
+	margin: 0;
+}
+
+nav[aria-label="Breadcrumb"] li {
+	color: rgb(110,110,150);
+}
+
+nav[aria-label="Breadcrumb"] li + li::before {
+	content: ">";
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
+	color: rgb(110,110,150);
+}
+
+nav[aria-label="Breadcrumb"] li[aria-current="page"] {
+	color: rgb(20,20,20);
+}
+
+nav[aria-label="Breadcrumb"] a {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav[aria-label="Breadcrumb"] a:hover {
+	text-decoration: underline;
+}
+
+main {
+	background-color: white;
+	padding: 3rem 4rem;
+	display: flex;
+	gap: 3rem;
+}
+
+main > section {
+	flex: 2;
+}
+
+main > section h2 {
+	font-size: 3rem;
+	margin-bottom: 1.5rem;
+}
+
+main > section p {
+	line-height: 1.6;
+}
+
+main > aside {
+	flex: 1.3;
+	padding-left: 2rem;
+	border-left: 1px solid rgb(210,210,220);
+	min-width: 12rem;
+}
+
+main > aside h3 {
+	font-size: 1.5rem;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+main > aside ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2rem 0;
+}
+
+main > aside li {
+	margin-bottom: 0.8rem;
+}
+
+main > aside ul li strong {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 0.05rem;
+	color: rgb(78,78,255);
+	margin-right: 0.4rem;
+}
+
+main > aside h3:last-of-type + ul li {
+	color: rgb(78,78,255);
+}
+
+footer {
+	margin-top: 3rem;
+	background-color: rgb(200,200,210);
+	padding: 2rem;
+	text-align: center;
+}
+
+footer h2 {
+	margin: 0;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+}
+
+footer h2 strong {
+	color: white;
+}
+
+footer h2 strong:nth-of-type(2) {
+	color: black;
+}
+
+footer nav a {
+	display: inline-block;
+	margin: 1rem 1.5rem 0 1.5rem;
+	color: rgb(20,20,20);
+	text-decoration: none;
+}
+
+footer nav a:hover {
+	text-decoration: underline;
+}
+
+
+/*
+	With the selection of the different heading elements below, we are using 'rem' units to establish a default hierarchy for their font sizes. Rem units refer to 'root-em' which are a multiple of the base font-size set by the browser. As a result, rem units are particularly useful for establishing hierarchies in type.
+*/
+h1 {
+	font-size: 3rem;
+	/*
+		We can be more specific than just 'margin' with our property and specify 'margin-bottom' instead. In this case, because we are setting a value of 0, there is no need to add a unit to the value.
+	*/
+
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 2.25rem;
+	margin-bottom: 0;
+}
+
+h3 {
+	font-size: 1.6rem;
+	margin-bottom: 0;
+}
+
+
+
+/*
+	Below we are setting defaults for a series of selectors. The comma allows us to select a combination of elements.
+*/
+p, ol, ul {
+
+	/*
+		max-width is a property which easily allows us to ensure something does not extend past a certain point in width. In this case, we can use it to make line-lengths more manageable in our text.
+	*/
+	max-width: 40rem;
+}
+
+
+
+img {
+	/* 
+		We are saying we want the img to adjust its height accordingly when the width changes.
+	*/
+	height: auto; 
+
+	/* 
+		Then we tell it we don't want it to exceed 100% of the parent element. In this case it resizes with the 'body' tag (the browser window).
+	*/
+	max-width: 100%;
+
+	/* 
+		The three statements below allow us to set a border around our images, in order they set the width, the style (dashed, solid, etc), and then the color of the border.
+	*/
+	border-width: 1px;
+	border-style: solid;
+	border-color: black; 
+}
+
+
+/*
+	Because the figure element has a margin set on it by default, if we do not want it to have a margin we have to set the margin to zero.
+*/
+figure {
+	margin: 0;
+}
+
+figcaption {
+	font-style: italic;
+}
+
+
+
+a {
+	/*
+		Setting colours for elements can be done in a variety of ways. You can use just the colour name 'blue', you can use a HEX value '#00AAFF', you can specify an rgb value 'rgb(0,200,255)', and you can specify an rgb value with alpha (or opacity) using 'rgba(0,200,255,0.8)' (80%).
+	*/
+	color: rgb(78,78,255);
+
+	/*
+		The transition property makes it very easy to create smooth transitions for different CSS properties. In this case, with the two statements below we are specifying that we want to transition the 'color' property over 0.5 seconds. Note that you have to have another state for the element - example below in a:hover - for it to actually make use of the transition.
+	*/
+	transition-property: color;
+	transition-duration: 0.3s;
+}
+
+
+
+/* 
+	The :hover and :focus are pseudo-states for elements. In this case, we are saying when the anchor tag is the 'hover' (being hovered over) and 'focus' (selected by keyboard, i.e. tab) states it should apply the styling specified.
+*/
+a:hover, a:focus {
+	color: rgb(40,40,200); 
+	/*
+		The text-decoration property allows us to add or remove underlining. In this case we are removing it.
+	*/
+	text-decoration: none;
+}
+
+
+
+/*
+	Styling the primary navigation links in the header like buttons.
+*/
+header nav a {
+	display: inline-block;
+	text-decoration: none;
+	transition-property: background-color;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+header nav a:active,
+header nav a:hover,
+header nav a:focus {
+	color: white;
+	background-color: rgba(255,255,255,0.2);
+}
