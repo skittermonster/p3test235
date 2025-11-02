@@ -60,6 +60,7 @@ header {
 	padding: 1.5rem 2rem;
 	margin-bottom: 1.5rem;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 2rem;
 	color: white;
@@ -137,6 +138,7 @@ nav[aria-label="Breadcrumb"] ol {
 	list-style: none;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 0.3rem;
 	padding: 0;
 	margin: 0;
@@ -171,6 +173,7 @@ main {
 	padding: 3rem 4rem;
 	display: flex;
 	gap: 3rem;
+	flex-wrap: wrap;
 }
 
 main > section {
@@ -369,4 +372,84 @@ header nav a:hover,
 header nav a:focus {
 	color: white;
 	background-color: rgba(255,255,255,0.2);
+}
+
+@media (max-width: 50rem) {
+	body {
+		font-size: 1.1rem;
+	}
+
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+		padding: 1.5rem;
+	}
+
+	header nav {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	header nav a {
+		margin-right: 0;
+		padding: 0.5rem 0.75rem;
+		background-color: rgba(255,255,255,0.15);
+		border-radius: 0.3rem;
+	}
+
+	header form {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	header form input {
+		width: 100%;
+		min-width: 0;
+	}
+
+	nav[aria-label="Breadcrumb"] {
+		padding: 0 1.5rem;
+	}
+
+	main {
+		flex-direction: column;
+		padding: 2rem 1.5rem;
+	}
+
+	main > section,
+	main > aside {
+		flex: 1 1 auto;
+	}
+
+	main > aside {
+		border-left: none;
+		padding-left: 0;
+		border-top: 1px solid rgb(210,210,220);
+		padding-top: 2rem;
+	}
+
+	main > aside h3:first-of-type {
+		margin-top: 0;
+	}
+
+	footer {
+		padding: 2rem 1.5rem;
+	}
+}
+
+@media (max-width: 32rem) {
+	header h1 {
+		font-size: 2rem;
+	}
+
+	main > section h2 {
+		font-size: 2.2rem;
+	}
+
+	footer h2 {
+		font-size: 1.75rem;
+	}
 }
