@@ -8,10 +8,11 @@
 /*
 	Below we have selected the body element - aka <body> - and are setting some styling for it. Generally it is a good idea to only select entire sets of elements to set default stylings. Aim to use classes when styling elements more specifically.
 */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+
+
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -230,7 +231,7 @@ a:focus {
 	font-weight: 700;
 	font-size: 1.5rem;
 	letter-spacing: 0.08rem;
-	color: #111111;
+	color: #000000;
 }
 
 .bottom-links {
@@ -239,7 +240,7 @@ a:focus {
 }
 
 .bottom-link {
-	color: #111111;
+	color: #000000;
 }
 
 
@@ -260,6 +261,7 @@ Rem with 600/16 = 37.5rem as learned in the oct 21 lecture
 		text-align: center;
 		gap: 1rem;
 		padding: 1rem;
+		flex-wrap: wrap; /* allows wrapping on extreme narrow screens */
 	}
 
 	.top-links,
