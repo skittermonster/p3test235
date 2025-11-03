@@ -244,15 +244,31 @@ a:focus {
 	color: #111111;
 }
 
-/* Make layout adapt to mobile screens */
+
+/* Responsive adjustments for mobile screens */
 @media (max-width: 600px) {
-  body {
-    padding: 10px;
-    font-size: 16px;
+  .top-bar,
+  .bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
   }
 
-  .container {
-    width: 100%;
-    margin: 0 auto;
+  .main-area {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .side-info {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .top-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 }
