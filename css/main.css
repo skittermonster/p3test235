@@ -1,16 +1,6 @@
 /*
-	Welcome to CSS styling! This is how we style our HTML pages. It is important to note how we select and change the styling for an element:
-
-	selector {
-		property: value;
-		property2: value2;
-	}
-
-	selector - The item we are selecting to be restyled. This can be an element name such as h1 or img, or the name of an id or class (#robots, .item-class)
-	property - A CSS property that we want to restyle the element with, such as font-size or color.
-	value - The value we want to set the property to, such as 16px or blue.
-
-	Make sure to separate different property/value statements with a colon between property: value, and a semicolon at the end of the property: value; statement. 
+	Stylesheet for my p3, it was made by using the starter kit provided in the oct 21 
+	class as a base and then modifying it to fit my needs. 
 */
 
 
@@ -18,6 +8,12 @@
 /*
 	Below we have selected the body element - aka <body> - and are setting some styling for it. Generally it is a good idea to only select entire sets of elements to set default stylings. Aim to use classes when styling elements more specifically.
 */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 body {
 	/*
 		Font family works by stating a series of fonts in order from most to least specific. The reason is to ensure that if the first font is not available, that we have fall-backs that the browser can load up if needed.
@@ -34,7 +30,7 @@ body {
 	*/
 	font-size: 1.25rem;
 	
-	height: 54rem; /* Make sure that the body takes up the full height of the page */
+	min-height: 100vh; /* Ensure the body is at least full viewport height without clipping content */
 	
 	display: flex;
 	flex-direction: column;
@@ -61,6 +57,7 @@ a:focus {
 	background-color: #4b4df7;
 	color: #ffffff;
 	padding: 1.5rem 3rem;
+	width: 100%;
 }
 
 .logo-area {
@@ -226,6 +223,7 @@ a:focus {
 	gap: 3rem;
 	font-size: 1rem;
 	margin-top: auto;
+	width: 100%;
 }
 
 .bottom-logo {
@@ -245,30 +243,51 @@ a:focus {
 }
 
 
-/* Responsive adjustments for mobile screens */
-@media (max-width: 600px) {
-  .top-bar,
-  .bottom-bar {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-    padding: 1rem;
-  }
+/*
+Using rem units, originally was 600px but converted to 
+Rem with 600/16 = 37.5rem as learned in the oct 21 lecture 
+*/
+@media (max-width: 37.5rem) {
+	body {
+		height: auto;
+	}
 
-  .main-area {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-  }
+	.top-bar,
+	.bottom-bar {
+		width: 100%;
+		box-sizing: border-box;
+		flex-direction: column;
+		text-align: center;
+		gap: 1rem;
+		padding: 1rem;
+	}
 
-  .side-info {
-    border-left: none;
-    padding-left: 0;
-  }
+	.top-links,
+	.search-area {
+		margin-left: 0;
+	}
 
-  .top-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
+	.search-area,
+	.search-box {
+		width: 50%;
+	}
+
+	.main-area {
+		max-width: 100%;
+		flex-direction: column;
+		gap: 2rem;
+		padding: 1.5rem;
+		box-sizing: border-box;
+	}
+
+	.side-info {
+		border-left: none;
+		padding-left: 0;
+	}
+
+	.top-links {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
 }
