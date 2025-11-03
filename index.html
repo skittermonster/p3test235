@@ -3,89 +3,106 @@
 	
 
 	<head>
-			
+
 		<meta charset="utf-8">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>My Less Hideous Page</title>
 		
-		<title>PETS4U - Ginger</title>
-		
-		<link rel="stylesheet" href="css/normalize.css">
-		
+		<link rel="stylesheet" href="css/normalize.css"> 
+
 		<!-- 
 			Here we are linking up a separate stylesheet to manage our grid structures.
 		-->
 		<link rel="stylesheet" href="css/grid.css">
 		<link rel="stylesheet" href="css/main.css">
-	
+
 	</head>
 	<body>
 
-		<header>
-			<div>
-				<h1><strong>PETS</strong><strong>4</strong><strong>U</strong></h1>
-				<p>Pet Adoption</p>
+		<header class="top-bar">
+
+			<div class="logo-area">
+				<div class="logo-text">
+					<span class="logo-word">PETS</span><span class="logo-number">4</span><span class="logo-word">U</span>
+				</div>
+				<p class="logo-sub">Pet Adoption</p>
 			</div>
 
-			<nav>
-				<a href="#">Home</a>
-				<a href="#">Cats</a>
-				<a href="#">Dogs</a>
+			<nav class="top-links">
+				<a href="" class="top-link is-active">Home</a>
+				<a href="" class="top-link">Cats</a>
+				<a href="" class="top-link">Dogs</a>
 			</nav>
 
-			<form>
-				<label for="site-search">Search</label>
-				<input id="site-search" type="search" placeholder="Search">
+			<form class="search-area">
+				<label for="search" class="search-label">Search</label>
+				<input id="search" class="search-box" type="text" placeholder="Search">
 			</form>
+
 		</header>
 
-		<nav aria-label="Breadcrumb">
-			<ol>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Cats</a></li>
-				<li aria-current="page">Ginger</li>
-			</ol>
-		</nav>
+		<div class="path-row">
+			<a href="#" class="path-link">Home</a>
+			<span class="path-arrow">></span>
+			<a href="#" class="path-link">Cats</a>
+			<span class="path-arrow">></span>
+			<span class="path-current">Ginger</span>
+		</div>
 
-		<main>
-			<section>
-				<h2>Ginger</h2>
+		<main class="main-area">
+
+			<section class="pet-story">
+				<h1>Ginger</h1>
 				<p>
-					This adorable companion is a total snugglebug - 
-					they just can't get enough of being close to you 
-					(and holding onto you for dear life). But don't worry, 
-					they're not clingy all the time... 
-					they know how to give you space when you need it too. 
-					Just remember: with great cuddle power comes great responsibility 
-					to keep those skin issues at bay!
+					This adorable companion is a total snugglebug - they just can't get enough of being close to you (and holding onto you for dear life). But don't worry, they're not clingy all the time... they know how to give you space when you need it too. Just remember: with great cuddle power comes great responsibility to keep those skin issues at bay!
 				</p>
 			</section>
 
-			<aside>
-				<h3>About</h3>
-				<ul>
-					<li><strong>Age:</strong> 5 yrs</li>
-					<li><strong>Sex:</strong> Male</li>
-					<li><strong>Weight:</strong> 2 kg</li>
-					<li><strong>Breed:</strong> Sphynx</li>
-					<li><strong>Colour:</strong> Grey / White</li>
-					<li><strong>ID:</strong> 989451</li>
-				</ul>
+			<div class="side-info">
 
-				<h3>Compatibility</h3>
-				<ul>
-					<li>No dogs</li>
-					<li>No small children</li>
-					<li>Indoor only</li>
-				</ul>
-			</aside>
+				<section class="about-box">
+					<h2>About</h2>
+					<ul class="about-list">
+						<li><span class="about-tag">Age:</span> 5 yrs</li>
+						<li><span class="about-tag">Sex:</span> Male</li>
+						<li><span class="about-tag">Weight:</span> 2 kg</li>
+						<li><span class="about-tag">Breed:</span> Sphynx</li>
+						<li><span class="about-tag">Colour:</span> Grey / White</li>
+						<li><span class="about-tag">ID:</span> 989451</li>
+					</ul>
+				</section>
+
+				<section class="match-box">
+					
+					<h2>Compatibility</h2>
+					
+					<ul class="compatability-list">
+						
+						<li><span class="arrow">></span>
+						<span class="match">No dogs</span></li>
+						
+						<li><span class="arrow">></span>
+						<span class="match">No small children</span></li>
+						
+						<li><span class="arrow">></span>
+						<span class="match">Indoor only</span></li>
+					
+					</ul>
+				
+				</section>
+
+			</div>
+
 		</main>
 
-		<footer>
-			<h2><strong>PETS</strong><strong>4</strong><strong>U</strong></h2>
-			<nav>
-				<a href="#">About</a>
-				<a href="#">Contact</a>
+		<footer class="bottom-bar">
+			
+			<div class="bottom-logo">PETS<span class="logo-number">4</span>U</div>
+			
+			<nav class="bottom-links">
+				<a href="" class="bottom-link">About</a>
+				<a href="" class="bottom-link">Contact</a>
+			
 			</nav>
 		</footer>
 
