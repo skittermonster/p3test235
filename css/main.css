@@ -10,7 +10,11 @@
 */
 
 
-
+/* 
+	The * operator learned from class will ensure it applies to all elements on the page
+	Ensure padding is included in width as seen in this example from w3 schools
+   https://www.w3schools.com/css/css3_box-sizing.asp
+*/
 * {
   box-sizing: border-box;
 }
@@ -46,7 +50,11 @@ a {
 	transition-property: color;
 	transition-duration: 0.5s;
 }
-
+/* 
+	Removing the underline from links 
+	when they are 
+	hovered or focused
+*/
 a:hover,
 a:focus {
 	text-decoration: none; 
@@ -68,29 +76,29 @@ a:focus {
 .logo-area {
 	display: flex;
 	flex-direction: column;
+	/* 
+	specifiy the gap between the logo text and the pet adoption text, learned from
+	https://www.w3schools.com/cssref/css3_pr_gap.php
+	*/
 	gap: 0.25rem;
 }
 
 /* 
 	For the main text in the logo 
+	I looked for a way to make it bold from w3 schools
+	https://www.w3schools.com/cssref/pr_font_weight.php
 */
 .logo-text {
 	font-size: 2.5rem;
-	font-weight: 700;
+	font-weight: bold;
 	letter-spacing: 0.1rem;
 }
 
 /* 
-	For the letters in the logo 
-*/
-.logo-letter {
-	color: white;
-}
-/* 
 	For the 4 in the logo that is a different colour to change the colour
 */
 .logo-number {
-	color: #0e0e0e;
+	color: #000000;
 }
 
 /* 
@@ -107,6 +115,9 @@ a:focus {
 	Styling for the navigation links on the top right of the page 
 	refenced the flex cheat sheet by Joni Trythall for flexbox help
 	https://jonitrythall.com/flexbox-cheatsheet
+	And the gap method learned from w3 so i could force the links to be spaced out
+	https://www.w3schools.com/cssref/css3_pr_gap.php
+
 */
 .top-links {
 	display: flex;
@@ -130,7 +141,6 @@ a:focus {
 /* 
 	For the styling of the search  bar area on the top right of the page
 */
-
 .search-area {
 	margin-left: 2rem;
 }
@@ -142,14 +152,17 @@ a:focus {
 .search-box {
 	padding: 0.4rem 0.75rem;
 	border: none;
-	border-radius: 2px;
+	border-radius: 0.125rem;
 	background-color: white;
 	min-width: 10rem;
 	font-size: 1rem;
 }
 
 
-
+/* 
+	Controls the styling of the path row that is below the top bar
+	uses flexbox, https://jonitrythall.com/flexbox-cheatsheet. 
+*/
 .path-row {
 	display: flex;
 	align-items: center;
@@ -160,7 +173,7 @@ a:focus {
 }
 
 .path-link {
-	color: #4b4df7;
+	color: #000000;
 }
 
 .path-current {
@@ -170,7 +183,6 @@ a:focus {
 .main-area {
 	display: flex;
 	gap: 6rem;
-	align-items: flex-start;
 	/* Make sure that all the content is 
 	centered on the page */
 	background-color: white;
@@ -183,17 +195,23 @@ a:focus {
 	flex: 1;
 }
 
+/* Control the styling for the large title that says ginger*/
 .pet-story h1 {
 	font-size: 3.25rem;
 	margin: 0 0 1.5rem;
 }
 
+/* Control the styling for the paragraph */
 .pet-story p {
 	max-width: 30rem;
 	line-height: 1.6;
 	font-size: 1.1rem;
 }
 
+/* 
+	Controls the styling of the side info details box on the right side of the main area
+	uses column flexbox, https://jonitrythall.com/flexbox-cheatsheet. 
+*/
 .side-info {
 	display: flex;
 	flex-direction: column;
@@ -207,6 +225,10 @@ a:focus {
 	font-size: 1.8rem;
 }
 
+/* 
+	Controls the styling of the side info details box on the right side of the main area
+	uses column flexbox, https://jonitrythall.com/flexbox-cheatsheet. 
+*/
 .about-list,
 .compatability-list {
 	list-style: none;
@@ -234,14 +256,14 @@ a:focus {
 	color: #111111;
 }
 
+/* 
+	For the arrow icon in the compatability list to give it a different colour
+*/
 .arrow {
 	color: #4b4df7;
 	font-weight: 700;
 }
 
-.match-text {
-	color: #111111;
-}
 
 .bottom-bar {
 	background-color: #d6d6d6;
@@ -285,7 +307,6 @@ a:focus {
 	.top-bar,
 	.bottom-bar {
 		width: 100%;
-		box-sizing: border-box;
 		flex-direction: column;
 		text-align: center;
 		gap: 1rem;
@@ -308,7 +329,6 @@ a:focus {
 		flex-direction: column;
 		gap: 2rem;
 		padding: 1.5rem;
-		box-sizing: border-box;
 	}
 
 	.side-info {
