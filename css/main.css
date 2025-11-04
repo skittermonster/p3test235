@@ -61,32 +61,53 @@ a:focus {
 	width: 100%;
 }
 
+
+/* 
+	All the logo ones are to handle the styling of the logo 
+*/
 .logo-area {
 	display: flex;
 	flex-direction: column;
 	gap: 0.25rem;
 }
 
+/* 
+	For the main text in the logo 
+*/
 .logo-text {
 	font-size: 2.5rem;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
 }
 
-.logo-word {
+/* 
+	For the letters in the logo 
+*/
+.logo-letter {
 	color: white;
 }
-
+/* 
+	For the 4 in the logo that is a different colour to change the colour
+*/
 .logo-number {
 	color: #0e0e0e;
 }
 
+/* 
+	This handles the "Pet adoption" text below the main logo 
+*/
 .logo-sub {
 	margin: 0;
 	font-size: 0.9rem;
 	color: #d6d8ff;
 }
 
+
+/* 
+	Styling for the navigation links on the top right of the page 
+	refenced the flex cheat sheet by Joni Trythall for flexbox help
+	https://jonitrythall.com/flexbox-cheatsheet
+*/
 .top-links {
 	display: flex;
 	gap: 2rem;
@@ -106,6 +127,10 @@ a:focus {
 	text-decoration: underline;
 }
 
+/* 
+	For the styling of the search  bar area on the top right of the page
+*/
+
 .search-area {
 	margin-left: 2rem;
 }
@@ -122,6 +147,8 @@ a:focus {
 	min-width: 10rem;
 	font-size: 1rem;
 }
+
+
 
 .path-row {
 	display: flex;
@@ -246,8 +273,9 @@ a:focus {
 
 
 /*
-Using rem units, breakpoint set to 640px for tablets:
-640/16 = 40rem
+	Using rem units with breakpoint set to 640px for tablets or like really
+	small phones
+	640/16 = 40rem as seen during the oct 21 class 
 */
 @media (max-width: 40rem) {
 	body {
@@ -262,7 +290,7 @@ Using rem units, breakpoint set to 640px for tablets:
 		text-align: center;
 		gap: 1rem;
 		padding: 1rem;
-		flex-wrap: wrap; /* allows wrapping on extreme narrow screens */
+		flex-wrap: wrap; /* wrapping on extremely narrow screens */
 	}
 
 	.top-links,
