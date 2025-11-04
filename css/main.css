@@ -1,8 +1,16 @@
 /*
 	Stylesheet for my p3, it was made by using the starter kit provided in the oct 21 
 	class as a base and then modifying it to fit my needs. 
+
+	All the flexbox help was learned from the flexbox cheat sheet by Joni Trythall
+	https://jonitrythall.com/flexbox-cheatsheet
 */
 
+
+/* 
+	I learned the gap method as I was looking for a way to specifiy the gap between the logo text and the pet adoption text, learned from
+	https://www.w3schools.com/cssref/css3_pr_gap.php
+*/
 
 
 /*
@@ -62,7 +70,13 @@ a:focus {
 
 .top-bar {
 	display: flex;
+	/* 
+	Needed a way to set the to keep elements centered when the as the width of the page 
+	changes, learned from w3 schools
+	https://www.w3schools.com/cssref/css3_pr_align-items.php
+	*/
 	align-items: center;
+	
 	background-color: #4b4df7;
 	color: #ffffff;
 	padding: 1.5rem 3rem;
@@ -164,7 +178,6 @@ a:focus {
 */
 .path-row {
 	display: flex;
-	align-items: center;
 	gap: 0.5rem;
 	padding: 1rem 3rem;
 	font-size: 0.95rem;
@@ -187,8 +200,6 @@ a:focus {
 	background-color: white;
 	margin: 0 auto 3rem;
 	max-width: 55rem;
-	width: 100%;
-
 	padding: 3rem 4rem;
 	min-height: 22rem;
 	flex: 1;
@@ -203,7 +214,9 @@ a:focus {
 /* Control the styling for the paragraph */
 .pet-story p {
 	max-width: 30rem;
-	line-height: 1.6;
+	line-height: 1.6; /* found this as I was looking for an easy way 
+						to make the paragrpah more legible and increase the spacing verically between lines
+						https://www.w3schools.com/cssref/pr_dim_line-height.php*/
 	font-size: 1.1rem;
 }
 
@@ -230,7 +243,9 @@ a:focus {
 */
 .about-list,
 .compatability-list {
-	list-style: none;
+
+	list-style: none; /* Remove default bullets while still being able to use the list from ul 
+						i found on reddit https://www.reddit.com/r/webdev/comments/j91v3q/how_do_i_remove_bullet_points_from_ul_and_li/ */
 	padding: 0;
 	margin: 0;
 	display: flex;
@@ -250,7 +265,6 @@ a:focus {
 
 .compatability-list li {
 	display: flex;
-	align-items: center;
 	gap: 0.75rem;
 	color: #111111;
 }
@@ -269,6 +283,9 @@ a:focus {
 	padding: 2rem 3rem;
 	display: flex;
 	align-items: center;
+	/* wanted a way to force the items to be centered vertically as the page width changes
+	learned from the https://jonitrythall.com/flexbox-cheatsheet
+	*/
 	justify-content: center;
 	gap: 3rem;
 	font-size: 1rem;
@@ -305,7 +322,6 @@ a:focus {
 
 	.top-bar,
 	.bottom-bar {
-		width: 100%;
 		flex-direction: column;
 		/* A way i learned to center all the items in the top and bottom bars on mobile 
 		https://www.w3schools.com/cssref/pr_text_text-align.php */
