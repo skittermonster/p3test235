@@ -199,6 +199,7 @@ a:focus {
 	font-weight: 700;
 }
 
+
 .compatability-list li {
 	display: flex;
 	align-items: center;
@@ -245,10 +246,10 @@ a:focus {
 
 
 /*
-Using rem units, originally was 600px but converted to 
-Rem with 600/16 = 37.5rem as learned in the oct 21 lecture 
+Using rem units, breakpoint set to 640px for tablets:
+640/16 = 40rem
 */
-@media (max-width: 37.5rem) {
+@media (max-width: 40rem) {
 	body {
 		height: auto;
 	}
